@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="img/logotit.png" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Pattaya);
+
+
+
+  .cool-button {
+    display: inline-block;
+    padding: 9px 57px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px blue;
+    border-radius: 100px;
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 1px 1px 20px 11px rgba(0, 123, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    animation: cl 5s ease-in-out
+  }
+
+  .cool-button:hover {
+    box-shadow: -9px -7px 20px 6px rgb(0 121 251 / 50%), 2px 4px 20px 6px #00d8ff;
+  }
+
+  .cool-button::before {
+    content: 'Explore The Features';
+    position: absolute;
+    color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00d8ff, #007bff);
+    transform: translatey(-100%);
+    text-shadow: 1px 1px 1px  aqua;
+    transition: transform 0.3s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  @keyframes cl {
+    0% {
+      transform: translatey(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translatey(50%);
+      opacity: 0;
+    }
+  }
+
+  .cool-button:hover::before {
+    transform: translatey(0);
+  }
+
+
+
+
+
+
+
+
+
+
+  .cool-buton {
+    display: inline-block;
+    padding: 9px 57px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20%;
+    border: 2px blue;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 1px 1px 20px 11px rgba(0, 123, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    animation: cl 2s ease-in-out
+  }
+
+  .cool-buton:hover {
+    box-shadow: -9px -7px 20px 6px rgb(0 121 251 / 50%), 2px 4px 20px 6px #00d8ff;
+  }
+
+  .cool-buton::before {
+    content: 'Job Details';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00d8ff, #007bff);
+    transform: translatex(-100%);
+    transition: transform 0.3s;
+    color: #000000;
+    text-shadow: 1px 1px 1px  aqua;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  @keyframes cl {
+    0% {
+      transform: translatey(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translatey(50%);
+      opacity: 0;
+    }
+  }
+
+  .cool-buton:hover::before {
+    color: #000000;
+    transform: translatex(0);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes cool {
+    0% {
+      transform: translatey(70%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translatey(0%);
+      opacity: 1;
+    }
+  }
+
+  .cool-animation {
+    animation: cool 4s ease-in-out;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    font-weight: bolder;
+
+    text-shadow: -3px 1px 2px darkgrey;
+
+  }
+
+
+
+  .spnani {
+
+
+
+
+    color: #ffffff;
+    animation: col 3s ease-in;
+    text-shadow: 1px 1px 4px #23adec;
+  }
+
+  @keyframes col {
+    100% {
+      transform: translatex(0);
+      opacity: 1;
+
+    }
+
+    0% {
+      transform: translatex(50%);
+      opacity: 0;
+    }
+  }
+
+  .animation {
+    font-size: 46px;
+    color: #00d8ff;
+    animation: cl 2s ease-in;
+
+    text-shadow: 4px 4px 4px #aaa;
+  }
+
+  @keyframes cl {
+    100% {
+      transform: translatey(0);
+      opacity: 1;
+    }
+
+    0% {
+      transform: translatey(70%);
+      opacity: 0;
+    }
+  }
+
+  .text-clone {
+    text-align: center;
+  }
+
+
+
+
+  @media (max-width: 575.98px) {
+
+    #about {
+      padding: 2rem 2rem;
+    }
+
+    .pres {
+      font-size: 13px;
+    }
+
+    .ime {
+      left: -3rem;
+    }
+
+    .cool-button {
+
+      padding: 10px 23px;
+      font-size: 10px;
+    }
+
+    .img-fld {
+      max-width: 55px;
+    }
+
+
+    .cool-animation {
+      padding-top: -2rem;
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 80px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+
+      padding-left: 20px;
+      font-size: 22px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+  @media (min-width: 576px) {
+
+    #about {
+      padding: 3rem 2rem;
+    }
+
+    .pres {
+      font-size: 14px;
+    }
+
+    .ime {
+      left: 2rem;
+    }
+
+    .cool-button {
+
+      padding: 7px 20px;
+      font-size: 10px;
+    }
+
+    .img-fld {
+      max-width: 60px;
+    }
+
+
+    .cool-animation {
+
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 78px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 768px) {
+    .pres {
+      font-size: 15px;
+    }
+
+    .ime {
+      left: 6rem;
+    }
+
+    .cool-button {
+
+      padding: 10px 30px;
+      font-size: 14px;
+    }
+
+    .img-fld {
+      max-width: 98px;
+    }
+
+
+    .cool-animation {
+
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 98px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+
+      padding-left: 20px;
+      font-size: 20px;
+    }
+
+  }
+
+
+
+
+
+  @media (min-width: 992px) {
+    .pres {
+      font-size: 16px;
+    }
+
+    .cool-button {
+
+      padding: 12px 35px;
+      font-size: 15px;
+    }
+
+
+
+    .cool-animation {
+
+
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 115px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+      padding-left: 20px;
+      font-size: 30px;
+    }
+
+  }
+
+
+  @media (min-width: 1200px) {
+    .pres {
+      font-size: 18px;
+    }
+
+    .cool-button {
+
+      padding: 12px 35px;
+      font-size: 18px;
+    }
+
+    .ime {
+      left: -1rem;
+    }
+
+
+    .cool-animation {
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 155px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+      padding-left: 20px;
+      font-size: 35px;
+    }
+
+
+
+
+
+  }
+
+
+  @media (min-width: 1400px) {
+
+    .pres {
+      font-size: 19px;
+    }
+
+    .ime {
+      left: 3rem;
+    }
+
+
+    .cool-button {
+
+      padding: 17px 40px;
+      font-size: 20px;
+    }
+
+
+
+    .cool-animation {
+
+
+      -webkit-text-stroke: 2px #c0c0c0;
+      font-weight: bolder;
+      font-size: 175px;
+      text-align: center;
+    }
+
+
+
+    .spnani {
+      padding-left: 20px;
+      font-size: 55px;
+    }
+
+
+    .animation {
+      font-size: 65px;
+
+    }
+
+  }
+
+
+
+
+
+
+
+  * {
+    font-family: serif;
+  }
+
+
+
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      ;
+
+    }
+
+    100% {
+      opacity: 1;
+      ;
+    }
+  }
+
+
+  .hover1 {
+    overflow: hidden;
+  }
+
+  .imgjhg1 {
+    display: block;
+    transition: 2s;
+    box-shadow: 2px 2px 10px #444444;
+  }
+
+  .hover1:hover .imgjhg1 {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 10px #444444;
+  }
+
+  .hover {
+    overflow: hidden;
+  }
+
+  .imgjhg {
+    display: block;
+    transition: 2s;
+    float: right;
+    transform: scale(1.2);
+  }
+
+  .hover:hover .imgjhg {
+    transform: scale(0.9);
+    ;
+  }
+
+  .forth {
+
+    background-color: #030b0b;
+    color: #ffffff;
+  }
+
+  .card:hover .slic {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card .slic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(-10%);
+    z-index: 3;
+  }
+
+  .card .slic-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .card:hover .slic-text {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .card:hover::after {
+    height: 100%;
+  }
+
+  /* Rest of your existing CSS styles */
+  .card {
+    box-shadow: 1px 1px 20px 0px #000000;
+    box-shadow: inset 1px 1px 20px 0px #000000;
+    height: 27rem;
+    width: 20rem;
+    border: none;
+    color: aliceblue;
+    margin: 10% auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #494949cb;
+    background-clip: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 10rem;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: cover;
+    background-size: cover;
+    width: 100%;
+    height: 0%;
+    z-index: inherit;
+    transition: 0.6s;
+    box-shadow: 1px 1px 10px 3px inset rgb(97, 97, 97, 1);
+  }
+
+
+
+
+
+  .boie {
+    max-width: 11rem;
+    position: relative;
+    top: -15%;
+    left: 22%;
+    z-index: 2;
+  }
+
+
+
+  .card-body {
+    z-index: inherit;
+    flex: 1 1 auto;
+    padding: 3rem 3rem;
+  }
+
+
+
+
+  #number {
+    text-align: center;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 58px;
+    transform: translate(66%, -270%);
+    position: sticky;
+    left: 0%;
+    margin-bottom: -70%;
+    transition: 2s;
+    z-index: 2;
+    color: #ffffff;
+  }
+
+  .oino {
+    background-image: url(background\ 3.png);
+
+    background-size: cover;
+    background-position: cover;
+  }
+
+
+
+  main {
+    padding: 40px;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  .content {
+    flex: 1;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+
+    line-height: 1.6;
+    color: #555;
+  }
+
+
+
+  .imghe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+  }
+
+  /* Cool Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  @media (max-width:991.98px) {
+    .intod {
+      margin: 3rem 0rem;
+      padding: 4rem 4rem;
+      border-radius: 15px;
+      box-shadow: 9px 8px 20px 0px #153769;
+      text-align: justify;
+      font-size: 19px;
+      color: #bfbfbf;
+      background-image: url(https://medicine.ai.uky.edu/wp-content/themes/hashone/images/default-img.jpg);
+      background-size: cover;
+    }
+  }
+
+
+
+
+  /* Responsive CSS */
+  @media (max-width: 1200px) {
+
+
+
+    .container .content h2 {
+      font-size: 28px;
+    }
+
+
+    .button {
+      font-size: 18px;
+    }
+
+    /* For smaller screens, adjust padding and font size */
+    main {
+      padding: 20px;
+    }
+
+    section {
+      flex-direction: column;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+
+    .imghe {
+      border-radius: 24px;
+    }
+
+
+  }
+
+  /* For the hover effect */
+  #about {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+
+    border-radius: 20px;
+  }
+
+  #about::before,
+  #about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.144);
+    transition: transform 0.5s;
+  }
+
+  #about::before {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  #about::after {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  #about:hover::before,
+  #about:hover::after {
+    transform: translateX(0);
+  }
+
+  .bag {
+    background-image: url("img/pexels-tara-winstead-8386440-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  .intod {
+    margin: 3rem 0rem;
+    padding: 4rem 4rem;
+    border-radius: 15px;
+    box-shadow: 9px 8px 20px 0px #153769;
+    text-align: justify;
+    font-size: 19px;
+    color: #bfbfbf;
+    background-image: url(https://medicine.ai.uky.edu/wp-content/themes/hashone/images/default-img.jpg);
+    background-size: cover;
+  }
+
+  #parent {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin: -2rem auto;
+    float: right;
+  }
+
+  #child {
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    border: 10px solid #5f87ba;
+    background-color: rgba initial;
+    color: #000;
+    font-size: 31px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 107px;
+    transition: all 1s;
+    /* margin: auto; */
+  }
+
+  .rgbaa {
+
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2.5s;
+    padding: 3rem 3rem;
+    color: #000000;
+  }
+
+  .rgbaa:hover {
+    color: #ffffff;
+    background-color: #000;
+  }
+
+
+
+  .btn12 {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  /* Styling for the double transformer effect on hover */
+  .btn12::before,
+  .btn12::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .btn12::after {
+    transform-origin: right;
+  }
+
+  /* Button hover effect */
+  .btn12:hover {
+    transform: translateX(10%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Double transformer effect on hover */
+  .btn12:hover::before,
+  .btn12:hover::after {
+    transform: scaleX(1);
+    ;
+  }
+
+  .danger {
+    align-items: center;
+    display: flex;
+    height: 484px;
+
+    width: 100%;
+    background-image: linear-gradient(291deg, #00192f, #00b8ff);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  button {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 19px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    color: #000000;
+    border: 2px solid black;
+    border-radius: 50%;
+    /* Make the buttons round */
+    outline: none;
+    transition: background-color 0.3s, border 0.3s;
+    /* Add border transition */
+  }
+
+  button:hover {
+    background-color: #0e65e7;
+    /* Darker color on hover */
+  }
+
+  button.active {
+    border: 2px solid #0614df;
+    /* Add border to active button */
+  }
+
+  .ime-container {
+
+    position: relative;
+    height: 41rem;
+    width: 42rem;
+    overflow: hidden;
+  }
+
+  .ime {
+    position: absolute;
+    top: 7rem;
+
+    opacity: 0;
+    transform: translateX(42px);
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(42px);
+    }
+
+    50% {
+      opacity: 0;
+      transform: translateX(42px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .ime.show {
+    animation: fadeIn 3s ease forwards;
+  }
+
+  .thrd {
+    width: 100%;
+
+    overflow: hidden;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3d-shape-value-prop?resMode=sharp2&op_usm=1.5,0.65,15,0&hei=323&qlt=85&fmt=webp-alpha&fit=constrain);
+    background-size: auto;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+
+  }
+
+  .hr1 {
+    margin: auto;
+
+
+    background-image: linear-gradient(76deg, #000000, #128cd8, rgb(0, 0, 0));
+    opacity: 1;
+    animation: line122 3s ease-in-out infinite;
+  }
+
+  @keyframes line122 {
+    0% {
+      width: 200px;
+    }
+
+    50% {
+      width: 590px;
+    }
+
+    100% {
+      width: 200px;
+
+    }
+  }
+
+  .font1 {
+    letter-spacing: 2px;
+  }
+
+  .stak {
+
+    position: sticky;
+    top: 26%;
+  }
+
+
+  .lin4 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px #d9dcdd;
+    font-weight: bolder;
+    font-size: 77px;
+    text-shadow: 3px 9px 10px black;
+  }
+
+
+
+
+
+  .conner {
+    position: relative;
+  }
+
+  .beautiful-button {
+    padding: 1rem 4rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .beautiful-button:hover {
+    transform: scale(1.1);
+    color: #fff;
+  }
+
+  .beautiful-button:active {
+    color: #fff;
+    transform: scale(0.9);
+  }
+
+  /* Cool Animation */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .beautiful-button {
+    background: linear-gradient(45deg, #FF0080, #7928CA, #FF512F, #FF0080);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  .parent {
+    position: relative;
+  
+}
+
+.child {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ 
+ 
+}
+
+.child-behind {
+
+width: 115%;
+    z-index: 1;
+}
+@keyframes rota{
+
+100%{transform: rotate(0deg)
+}0%{transform: rotate(360deg);}
+}
+.child-front {
+ 
+    z-index: 2;
+}
+.roun{
+  animation: rota 7s infinite cubic-bezier(0, 0, 0.45, 0.43);;
+}
+</style>
+
+<body>
+  <div class="progress-line" id="progressLine"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fld" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" id="anav" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="tool.html">Tool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="feature.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="anav" href="news1.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="contact.html">Contact</a>
+          </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+
+    <div class="row pt-5">
+      <div class="col d-none d-sm-block"> <img src="img/pngimg.com - robot_PNG40.png" class="img-dd " alt=""></div>
+      <div class="col text-clone pb-4">
+
+        <p class="cool-animation  " style="margin-top: -2rem;margin-bottom: -2rem;">Welcome
+        </p>
+        <p class="spnani lh-sm font1"> To The World Of
+          Artificial Intelligence </p>
+
+
+
+
+
+
+        <a href="feature.html" class="cool-button mt-2">Explore The Features</a>
+
+      </div>
+      <div class="col 	d-none d-sm-block" style="overflow: hidden;">
+        <div class="parent">
+          <div class="child child-behind"><img src="img/back.png" class="img-dd roun " alt=""></div>
+          <div class="child child-front"><img src="img/upd.png" class="img-dd  " alt=""></div>
+      </div>
+       
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <div class="container-flud thrd">
+    <div class="row">
+      <img src="img/bg.png" class=" img-fluid " alt="">
+    </div>
+
+    <h1 class="text-center fw-bolder   text-uppercase ">Leading the way with AI</h1>
+    <hr class="hr1 ">
+    <div class="row ">
+
+      <div class="col col-md-12 col-lg-6 t-5 ps-5 text-md-center  text-sm-center text-center text-lg-start"
+        style="margin-top: 8rem;">
+        <button class="ab1" data-image-number="1">1</button>
+        <button class="ab1" data-image-number="2">2</button>
+        <button class="ab1" data-image-number="3">3</button>
+        <h2 class="pt-5 font1"> Power of Machine Learning</h2>
+        <br>
+        <p>AI (Artificial Intelligence) is a field of computer science that aims to create intelligent machines capable
+          of performing tasks that typically require human intelligence, such as learning, reasoning, problem-solving,
+          and natural language understanding</p>
+
+      </div>
+      <div class="col col-md-12 col-lg-6">
+        <div class="ime-container">
+          <img id="ime1"
+            src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Built-in-AI?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=600&qlt=100&fmt=png-alpha"
+            alt="Image 1" class="ime img-fluid abc">
+          <img id="ime2"
+            src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Performacne-at-scale?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=600&qlt=100&fmt=png-alpha"
+            alt="Image 2" class="ime  img-fluid abc">
+          <img id="ime3"
+            src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Princples-in-practice?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=600&qlt=100&fmt=png-alpha"
+            alt="Image 3" class="ime img-fluid abc">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" forth " style="margin-top: 12rem;">
+
+    <div class="row ">
+      <div
+        class="col-lg-6 col-md-12  col-sm-12 col-12 py-5 px-5 text-md-center  text-sm-center text-center text-lg-start"
+        style="display: grid; place-items:center ; " data-aos="zoom-out-right">
+
+        <h1 class="fs-md-3  fs-sm-2 fw-bolder font1" style="color: #007bff; align-self: flex-end; ">AI Trend</h1>
+        <p class="fs-4 fw-lighter lh-lg"> The integration of AI across industries, the emphasis on ethical AI practices,
+          the rise of edge AI, and the advancements in generative AI and natural language processing are some of the
+          notable trends in the field of artificial intelligence.</p>
+
+      </div>
+
+
+      <div class=" hover1 col-lg-6 col-md-12 col-sm-12  col-12 ">
+        <img src="img/black.jpg" class="imgjhg1 img-fluid " id="two1" data-aos="zoom-out-left" alt="">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="row " style="    background-image: linear-gradient(88deg, #2ebcff, #0b78ff);">
+    <div class="row">
+      <img src="img/bg5.png" class="img-fluid" alt="">
+    </div>
+
+    <div class="col justify-content-lg-start   ms-5  my-5 text-lg-start text-md-center text-sm-center  text-center">
+      <div class="stak" data-aos="fade-down">
+
+        <h1 class=" fs-1 "> <span class="lin4">AI-related</span> </h1>
+        <h4 class="font1">roles that respondent'<br>
+          organizations hired, <br class="pt-1">
+          past
+          year , % of respondents' </h4>
+
+        <div class="conner mt-5">
+          <a class="beautiful-button" href="details.html">Click Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-lg-flex  d-md-flex text-align     text-light">
+      <div class="col  ms-sm-5 m-5 mt-5 ms-md-0">
+
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 39.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">39%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Software engineers</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+
+
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 28.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">28%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Data architects</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 22.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">22%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Ai product</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 30.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">30%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Machine learning engineers</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 33.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">33%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Ai data scientists</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+
+        <div class="card bois" data-aos="slide-up">
+          <img src="img/circul 35.png" class="card-img-top boie" alt="..." data-aos="flip-left">
+          <h5 class="card-title per text-center" id="number">35%</h5>
+          <div class="card-body bios-body">
+            <h1 class="card-title">Data engineers</h1>
+
+            <p class="card-text">AI enables businesses to analyze vast amounts of customer data.</p>
+            <ul class="tick">
+              <li>Demographics</li>
+              <li>browsing behavior</li>
+              <li>purchase history</li>
+            </ul>
+            <p class="card-text text-center">This information can be used to personalize marketing campaigns, target
+              specific customers.</p>
+          </div>
+          <div class="slic">
+            <h2>AI Job</h2>
+            <p>This card represents information about an AI job.</p>
+            <div class="slic-text">Additional details about the AI job can be shown here.</div>
+            <a href="details.html" class="cool-buton">Job Details</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+  <div class="continer bag">
+    <div class="row">
+      <img src="img/bg6.png" class="img-fluid" alt="">
+    </div>
+
+    <div class="container-fluid ">
+
+      <div class="row pt-5">
+        <div class=" col-lg-4 col-md-12  col-sm-12 col-12" style=" padding: 4rem 2rem" data-aos="zoom-out-right">
+          <h1 class="fw-bolder font1" style="font-weight: bolder!important;color: #fff;
+          font-size: -webkit-xxx-large">The Transformative <br>Role of AI in <br> Healthcare</h1>
+          <p style="color: white;font-size:x-large; font-weight: 700; text-shadow:rgb(0, 136, 255) 2px 2px;">
+            <span class="text-dark">"</span>The number of human to be recovered from Ai healthcare last month <span
+              class="text-dark">"</span>
+          </p>
+          <div id="parent">
+            <div id="child">0%</div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12  col-sm-12 col-12 intod" data-aos="fade-up">
+          <h2 class="text-center fw-bolder font1" style="text-decoration: underline;">Introduction</h2>
+          <p class="pres">In recent years, Artificial Intelligence (AI) has emerged as a powerful tool in the field of
+            healthcare,
+            revolutionizing various aspects of patient care and medical practices. One of the most promising
+            applications of AI in healthcare is in medical imaging and diagnostics, where AI-powered algorithms have
+            demonstrated remarkable accuracy in detecting and diagnosing diseases. Additionally, AI's predictive
+            analytics capabilities enable proactive interventions and personalized treatment plans, while its potential
+            in drug discovery and development offers hope for faster medication advancements. In this article, we
+            explore how AI is reshaping healthcare across different domains, while also addressing important ethical
+            considerations and the need for continuous research and development.</p>
+        </div>
+      </div>
+
+
+
+      <main>
+        <section id="about" data-aos="zoom-in">
+          <img class="imghe"
+            src="https://images.unsplash.com/photo-1666214280391-c9ef08d09da8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1lZGljYWwlMjBJbWFnaW5nJTIwYW5kJTIwRGlhZ25vc3RpY3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="">
+          <div class="content">
+            <h2 class="font1">Medical Imaging and Diagnostics</h2>
+            <p class="pres">AI-driven algorithms have made significant strides in analyzing medical images, including
+              X-rays, MRIs,
+              and CT scans, with unprecedented accuracy. By assisting radiologists in identifying conditions like
+              cancer, fractures, and neurological disorders, AI streamlines the diagnostic process, leading to faster
+              and more precise treatment decisions. This technology has the potential to improve patient outcomes and
+              optimize healthcare resources.</p>
+
+          </div>
+
+        </section>
+
+
+        <section id="about" data-aos="zoom-in">
+          <div class="content">
+            <h2 class="font1">predictive analytics</h2>
+            <p class="pres">Leveraging vast amounts of patient data, AI excels in identifying patterns and predicting
+              potential
+              health conditions or risks. With this predictive capability, healthcare providers can intervene
+              proactively, offering personalized treatment plans tailored to each patient's unique needs.</p>
+
+          </div>
+
+          <img class="imghe" src="img/web2.jpg.png" alt="">
+        </section>
+
+        <section id="about" data-aos="zoom-in">
+          <img class="imghe" src="img/weds.jpg.png" alt="">
+          <div class="content">
+            <h2 class="font1">Drug Discovery and Development</h2>
+            <p class="pres">AI's ability to analyze massive datasets and simulate molecular interactions expedites the
+              drug discovery
+              process. By predicting potential drug candidates and their efficacy, AI accelerates the development of new
+              medications, addressing unmet medical needs and reducing the time it takes to bring new drugs to market.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <section id="about" data-aos="zoom-in">
+          <div class="content">
+            <h2 class="font1">Virtual Health Assistants</h2>
+            <p class="pres">AI-powered chatbots and virtual assistants provide a valuable means of offering personalized
+              health
+              advice, medication reminders, and answering basic medical queries. These virtual health assistants improve
+              accessibility to healthcare information and support patients in managing their health more efficiently.
+
+            </p>
+
+          </div>
+
+          <img class="imghe"
+            src="https://emerj.com/wp-content/uploads/2018/10/ai-for-virtual-medical-assistants-4-current-applications-2-690x389.jpg"
+            alt="">
+        </section>
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="container-fliud danger">
+
+
+    <div class="row  rgbaa">
+      <div class="col-12 col-lg-6 col-md-6 col-sm-12 " data-aos="zoom-in-right">
+        <h2 class="fs-1 fw-bolder ">
+          What's aim of ai robot <span class="text-danger fs-1">?</span>
+        </h2>
+        <p class="fs-5 "><span class="text-danger ">"</span>The aim of AI robots (or AI-powered robots) is to develop
+          machines that can perform
+          tasks autonomously and intelligently, often with human-like or advanced capabilities<span
+            class="text-danger fs-1">"</span>
+        </p>
+        <a href="airodot.html" class="btn12 fw-bold"> See More </a>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6 col-sm-12 ">
+        <div class="hover" data-aos="zoom-in-left">
+          <img src="img/110819_ts_ai_feat-1028x579.png" class="img-fluid imgjhg " alt="">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer class="bgdark text-center text-light text-lg-start">
+
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+           <div class="col-lg-4 col-md-6 mb-4 mb-md-0  pe-5">
+          <h5 class="text-uppercase text-center  "> <a href="index.html"><img src="img/logo.png" width="130px" height="auto"></a></h5>
+          <p class="fs-6 "><span class="fs-3">A</span>rtificial intelligence is the future of computing, enabling
+            machines to learn, reason, and perform tasks that traditionally required human intelligence</p>
+
+        </div>
+        <!--Grid column-->
+
+
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3  fooedit">
+            <li class="my-lg-2">
+              <a href="index.html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="tool.html"><span class="lispan">Tool</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feature.html"><span class="lispan">Features</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contact.html"><span class="lispan">Contact</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="news1.html"><span class="lispan">News</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="details.html"><span class="lispan">Job Detail</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var parentElement = document.getElementById('parent');
+      var childElement = document.getElementById('child');
+      var elementPosition = parentElement.getBoundingClientRect().top;
+      var screenHeight = window.innerHeight;
+
+      if (elementPosition < screenHeight) {
+        parentElement.style.opacity = 1;
+        animateParent(parentElement);
+        animateChild(childElement);
+      } else {
+        parentElement.style.opacity = 0;
+        parentElement.style.transform = 'scale(0)';
+        childElement.textContent = '0%';
+        childElement.style.transform = 'scale(0)';
+      }
+    });
+
+    function animateParent(element) {
+      element.style.transform = 'scale(1)';
+    }
+
+    function animateChild(element) {
+      var startNumber = 0;
+      var endNumber = 40;
+      var duration = 1000;
+      var range = endNumber - startNumber;
+      var currentNumber = startNumber;
+      var increment = Math.ceil(range / (duration / 19));
+
+      var interval = setInterval(function () {
+        if (currentNumber >= endNumber) {
+          clearInterval(interval);
+        } else {
+          currentNumber += increment;
+          if (currentNumber > endNumber) {
+            currentNumber = endNumber;
+          }
+          element.textContent = currentNumber + '%';
+          var scaleValue = currentNumber / 40; // Scaling from 0 to 1
+          element.style.width = scaleValue * 120 + 'px';
+          element.style.height = scaleValue * 120 + 'px';
+          element.style.transform = 'scale(' + scaleValue + ')';
+        }
+      }, 19);
+    }
+
+
+  </script>
+
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var currentImage = 1;
+      var totalImages = 3;
+      var imageLoopInterval;
+
+      // Show the first image when the page loads
+      showImage(currentImage);
+
+      // Automatic image loop every 3 seconds
+      imageLoopInterval = setInterval(function () {
+        currentImage = (currentImage % totalImages) + 1;
+        showImage(currentImage);
+      }, 5000);
+
+      // Function to show the selected image
+      function showImage(imageNumber) {
+        // Hide all images first
+        var images = document.querySelectorAll(".ime");
+        for (var i = 0; i < images.length; i++) {
+          images[i].classList.remove("show");
+        }
+
+        // Show the selected image
+        var selectedImage = document.getElementById("ime" + imageNumber);
+        if (selectedImage) {
+          selectedImage.classList.add("show");
+        }
+
+        // Toggle active class for the buttons
+        var buttons = document.querySelectorAll(".ab1");
+        for (var j = 0; j < buttons.length; j++) {
+          buttons[j].classList.remove("active");
+          if (buttons[j].dataset.imageNumber === imageNumber.toString()) {
+            buttons[j].classList.add("active");
+          }
+        }
+      }
+
+      // Add event listeners to the buttons to handle clicks
+      var buttons = document.querySelectorAll(".ab1");
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          // Get the image number from the button's data attribute
+          var imageNumber = parseInt(button.dataset.imageNumber, 10);
+          showImage(imageNumber);
+          clearInterval(imageLoopInterval); // Stop the automatic loop when a button is clicked
+        });
+      });
+    });
+
+  </script>
+
+</body>
+
+
+</html>

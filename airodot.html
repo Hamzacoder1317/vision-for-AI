@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Robot-Aim</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link rel="stylesheet"  href="styles.css">
+  <link rel="icon" href="img/logotit.png" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575.98px)
+ { 
+  .img-fld{
+  max-width: 55px;
+}
+ } 
+
+ @media (min-width: 576px) { .img-fld{
+  max-width: 60px;
+} }
+
+
+@media (min-width: 768px) { .img-fld{
+  max-width: 98px;
+} }
+
+
+@media (min-width: 992px) {  }
+
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) { }
+
+
+
+
+
+
+
+
+  .contner {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .clone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(17deg, #008aff, #00293d);
+    transition: transform 0.5s ease;
+    position: relative;
+    scroll-behavior: smooth;
+    animation: scrollAnimation 5s;
+  }
+
+  @keyframes scrollAnimation {
+
+    0% {
+      transform: translateX(-50%);
+      background: linear-gradient(17deg, #008aff, #00293d)
+    }
+
+    50% {
+      transform: translateX(0);
+      background: linear-gradient(80deg, #008aff, #00293d)
+    }
+
+    100% {
+      transform: translateX(0);
+      background: linear-gradient(350deg, #008aff, #00293d)
+    }
+  }
+
+  .clone::before,
+  .clone::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.13));
+    pointer-events: none;
+  }
+
+  .clone::before {
+    left: 0;
+  }
+
+  .clone::after {
+    right: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .clone:hover {
+    transform: scale(1.2);
+    background-color: #232525;
+  }
+
+  .rob {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: 1.2s;
+  }
+
+  .rob:hover {
+    transform: scale(0.8);
+  }
+
+  h1 {
+    font-size: 40px;
+    color: #e0e0e0;
+    margin-top: 20px;
+    text-align: center;
+    animation: textAnimation 1.5s alternate;
+  }
+
+  @keyframes textAnimation {
+    0% {
+      transform: scale(4);
+    }
+
+    50% {
+      transform: scale(1.2)
+    }
+
+    ;
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  .aim1{
+
+border-radius: 15px;
+box-shadow: 1px 1px 10px;
+
+  transform: translateX(0px)
+;
+transition: 1.2s;
+  }
+.aim1:hover{
+
+  
+  transform: translateX(2px);
+}
+
+
+  .center {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px)
+    ;transition: 1.2s;
+  }
+  .conter:hover{
+    transform: translatey(2px)
+  }
+
+  .poi{
+    margin-top: -48px;
+    background-image: url("img/pexels-tara-winstead-8386440-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  .lin3{
+    padding-top: 4%;
+    padding-bottom: 5%;
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-weight:bolder;font-size: 60px;
+}
+.lin2{
+  padding-top: 4%;
+    padding-bottom: 5%;
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #070705;
+    font-weight:bolder;font-size: 60px;
+}
+
+
+
+
+</style>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fld" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="anav" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="tool.html">Tool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="feature.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav"  href="news1.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="progress-line" id="progressLine"></div>
+    <div class="content">
+ 
+
+
+
+  <div class="contner">
+    <div class="clone">
+      <img src="img/110819_ts_ai_feat-1028x579.png" class="rob" alt="Image">
+      <h1>Ai Robot</h1>
+    </div>
+  </div>
+
+
+
+  <div class="container-fliud   poi">
+
+    <h2 class="lin2  text-center  fw-bold mt-5">THE Aim Of <span class="lin3"></span> </h2>
+
+    <div class="container w-75  ">
+      <div class="row p-3">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+
+          <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/The_Future_of_Robotics.jpg"
+            class="img-fluid  aim1" alt="">
+
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center ">
+          <h2 class="text-center fw-bolder text-danger ">Assistance <span class="text-white"> and</span>  Support: </h2>
+          <p class="p-3 text-white">AI robots can be developed to assist and support humans in various domains, such as healthcare, eldercare,
+            education, and customer service. They can provide companionship, reminders, or personalized recommendations
+            to enhance human experiences.</p>
+
+        </div>
+      </div>
+
+
+<hr>
+
+      <div class="row p-3">
+
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center ">
+          <h2 class="text-center fw-bolder text-danger ">Learning <span class="text-white">and</span>  Adaptation: </h2>
+          <p class="text-white p-3"> Advanced AI robots are equipped with machine learning algorithms that enable them to learn from their
+            experiences and adapt to changing environments or tasks,This allows them to improve their performance over
+            time and become more capable in handling complex situations.</p>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+
+          <img src="https://i.ytimg.com/vi/UAfqE7ctcgs/maxresdefault.jpg" class="img-fluid aim1" alt="">
+
+        </div>
+      </div>
+
+<hr>
+
+
+
+      <div class="row p-3">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+
+          <img src="https://www.ieee-ras.org/images/space_robotics/ISS027E016182e.jpg" class="img-fluid aim1" alt="">
+
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center ">
+          <h2 class="text-center fw-bolder text-danger ">Exploration <span class="text-white">and</span>  Research: </h2>
+          <p class="text-white p-3"> In fields like space exploration or deep-sea exploration, AI robots can be used as intelligent probes to
+            gather data, explore unknown territories, and conduct research in environments that may be inhospitable or
+            dangerous for humans.</p>
+
+        </div>
+      </div>
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+      <div class="row p-3">
+       
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center ">
+          <h2 class="text-center fw-bolder text-danger ">Medical <span class="text-white">Applications</span>: </h2>
+          <p class="text-white p-3"> AI robots can be used in healthcare for diagnostics, surgery assistance, and patient care. They can
+            analyze medical images, help with repetitive tasks in laboratories, or provide physical assistance to
+            patients with limited mobility.</p>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+
+          <img
+            src="https://images.unsplash.com/photo-1666214280391-c9ef08d09da8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1lZGljYWwlMjBJbWFnaW5nJTIwYW5kJTIwRGlhZ25vc3RpY3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            class="img-fluid aim1" alt="">
+
+        </div>
+      </div>
+
+
+<hr>
+
+
+
+
+
+
+      <div class="row p-3">
+       
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+
+          <img src="https://www.amnesty.org.au/wp-content/uploads/2021/01/274313-1434x900.jpg" class="img-fluid aim1"
+            alt="">
+
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center mb-5">
+          <h2 class="text-center fw-bolder text-danger ">Safety  <span class="text-white">and</span>  Security:</h2>
+          <p class="text-white p-3"> AI robots can be deployed in hazardous situations, such as search and rescue missions during natural
+            disasters or dangerous law enforcement operations. They can also be used for surveillance and security
+            purposes to monitor public areas or sensitive locations.</p>
+
+        </div>
+       
+      </div>
+
+
+
+
+
+
+<hr>
+
+
+      <div class="row p-3">
+       
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12  center ">
+          <h2 class="text-center fw-bolder text-danger ">Entertainment <span class="text-white">and</span>  Gaming: </h2>
+          <p class="text-white p-3"> AI-powered robots can be designed for entertainment purposes, such as interactive toys or gaming
+            companions that respond to users' actions and emotions.</p>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12  ">
+          <img
+             src="https://www.bbntimes.com/images/articles/global-economy/The_Role_of_Robotics_in_the_Entertainment_Industry.jpeg"
+             class="img-fluid aim1" alt="">
+         </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+  <footer class="bgdark text-center text-light text-lg-start">
+   
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0  pe-5">
+          <h5 class="text-uppercase text-center  "> <a href="index.html"><img src="img/logo.png" width="130px" height="auto"></a></h5>
+          <p class="fs-6 "><span class="fs-3">A</span>rtificial intelligence is the future of computing, enabling
+            machines to learn, reason, and perform tasks that traditionally required human intelligence</p>
+
+        </div>
+        <!--Grid column-->
+
+       
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3  fooedit" >
+            <li class="my-lg-2">
+              <a href="index.html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="tool.html"><span class="lispan">Tool</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feature.html"><span class="lispan">Features</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contact.html"><span class="lispan">Contact</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="news1.html"><span class="lispan">News</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="details.html"><span class="lispan">Job Detail</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+  
+
+  </script>
+  <script>
+    var typingEffect = new Typed(".lin3",{
+      strings : ["CELEBRATION!" , "PHYSICAL ACTIVITY" , "ACTIVE RECREATION"],
+      loop : true,
+      typeSpeed : 100,
+      backSpeed : 80,
+      backDelay : 1500
+  
+    });
+  
+    
+  </script>
+
+</body>
+
+</html>

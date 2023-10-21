@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .toggle {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  .toggle input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggle input[type="checkbox"]:checked + .toggle-slider {
+    transform: translateX(30px);
+  }
+</style>
+</head>
+<body>
+  
+  <label class="toggle">
+    <input type="checkbox" id="toggle">
+    <a href="index.html"> <span class="toggle-slider"></span></a> 
+  </label>
+  
+  <script>
+    const toggle = document.getElementById("toggle");
+    
+    toggle.addEventListener("change", function() {
+      if (this.checked) {
+        // Perform action when toggle is turned ON
+        console.log("Toggle is ON");
+      } else {
+        // Perform action when toggle is turned OFF
+        console.log("Toggle is OFF");
+      }
+    });
+  </script>
+</body>
+</html>

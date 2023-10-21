@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logotit.png" type="image/x-icon">
+    <script src="script.js"></script>
+  <title>AI-Feature</title>
+</head>
+<style>
+      *
+    {
+        font-family: serif;
+    }
+  @media (min-width: 992px) {
+    .div1 {
+      margin-top: -20%;
+    }
+
+    #im2 {
+      float: right;
+    }
+
+    .div2 {
+      margin-top: 7%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .img3 {
+      margin: auto;
+      margin-bottom: 5%;
+      margin-top: 4%;
+    }
+  }
+
+  img {
+    border-radius: 20px;
+    transition: 0.8s;
+  }
+
+  .container
+  {
+    animation: leftFadeIn 1s ease-in-out;
+  }
+  .col {
+    background-color: rgba(0, 0, 0, 0.533);
+    color: white;
+    padding: 4%;
+    border-radius: 20px;
+    transition: 1s;
+
+
+  }
+
+
+  @keyframes leftFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .col:hover {
+    background-color:rgba(0, 213, 255, 0.371);
+  }
+
+  .img3 {
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .img3:hover img {
+    transform: scale(1.1);
+    z-index: 2;
+
+  }
+
+
+
+  body {
+    background-image: url("img/pexels-tara-winstead-8386440-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  #img3 {
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 1s;
+  }
+
+  .img4 {
+    overflow: hidden;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+  }
+
+  .main {
+    color: white;
+    background: linear-gradient(17deg, #00ffea42, #010b11);
+    padding: 2rem;
+    transition: 1s;
+    margin: auto;
+    animation: leftFadeIn 1s ease-in-out;
+  }
+
+  .img4:hover #img3 {
+    transform: scale(1.2);
+    z-index: 2px;
+  }
+  .main:hover
+  {
+    background-color:rgba(0, 213, 255, 0.371) ;
+  }
+
+  @keyframes leftFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<body>
+  <div class="progress-line" id="progressLine"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fld" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="anav" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="tool.html">Tool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" id="anav" href="feature.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav"  href="news1.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main mb-3">
+
+    <div class="img4 col-lg-5">
+      <img src="img/1224636.jpg" id="img3" class="img-fluid d-block" alt="">
+    </div>
+    <h2 class="mt-4 text-center fw-bold">AI FEATURES</h2>
+
+    <p class="text-center">The past decade witnessed several techniques and practices that have previously been a part
+      of science fiction only - that slowly transformed into reality with the onset of AI. And AI truly became a factor
+      of production, with the potential to introduce new sources of growth and change the way work is done across
+      industries our Artificial Intelligence tutorial will help you understand what exactly AI is, its need, and
+      applications across various sectors and industries, and more. The Hadoop tutorial also covers various skills and
+      topics and explains the best ways to implement AI and its use cases</p>
+  </div>
+
+  <div class="container text-center mt-5">
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block">
+          <img src="img/What-is-Automatic-Speech-Recognition-2-1.png" class="d-block img-fluid">
+        </div>
+
+        <div class="div1 col-lg-5 " style="float: right;">
+          <h2 class="mb-3">Speech recognition</h2>
+          Speech recognition is an interdisciplinary subfield of computer science and computational
+          linguistics that develops methodologies and technologies that enable the recognition and translation
+          of spoken language into text by computers.
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block" id="im2">
+          <img src="img/comp-vision.jpg" class="d-block img-fluid">
+        </div>
+        <div class="div2 col-lg-5" style="float: left;">
+          <h2 class="mb-3">Computer Vision</h2>
+          This feature enables AI systems to interpret and understand visual information from images or
+          videos. Computer vision algorithms can recognize objects, detect and track movements, perform facial
+          recognition, and extract information from visual data.
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block">
+          <img src="img/facial-recognition-1000-2020-11.jpg" class="d-block img-fluid">
+        </div>
+        <div class="div1 col-lg-5" style="float: right;">
+          <h2 class="mb-3">Facial Recognition</h2>
+          A facial recognition system is a technology potentially capable of matching a human face from a
+          digital image or a video frame against a database of faces.
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block" id="im2">
+          <img src="img/an-introduction-to-natural-language-processing-with-python-for-seos-5f3519eeb8368.png" id="im2"
+            class="d-block img-fluid">
+        </div>
+        <div class="div2 col-lg-5" style="float: left;">
+          <h2 class="mb-3">Natural Language Processing</h2>
+          Natural Language Processing enables AI systems to understand, interpret, and generate human
+          language. It includes tasks such
+          as text classification, sentiment analysis, machine translation, and speech recognition.
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block">
+          <img src="img/how-to-develop-machine-learning-applications-for-business-featured.jpg" class="d-block img-fluid">
+        </div>
+        <div class="div1 col-lg-5" style="float: right;">
+          <h2 class="mb-3">Machine Learning</h2>
+          Machine Learning algorithms allow AI systems to learn from data and improve their performance over
+          time without
+          being explicitly programmed. They can analyze patterns, make predictions, and make data-driven
+          decisions.
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block" id="im2">
+          <img src="img/Predictive-Analytics.webp" class="d-block img-fluid">
+        </div>
+        <div class="div2 col-lg-5" style="float: left;">
+          <h2 class="mb-3">Predictive Analytics</h2>
+          Predictive analytics uses historical data and statistical modeling to predict future outcomes or
+          trends. It is used in various domains, including finance, healthcare, marketing, and supply chain
+          management.
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block">
+          <img src="img/ai-assistant-1803078730-760.jpg" class="d-block img-fluid">
+        </div>
+        <div class="div1 col-lg-5" style="float: right;">
+          <h2 class="mb-3">Virtual Assistants</h2>
+          Virtual assistants, such as Siri, Alexa, or Google Assistant, use AI to understand and respond to
+          user queries or commands. They provide information, perform tasks, and interact with users through
+          natural language conversations.
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="row mb-5">
+
+      <div class="col">
+
+        <div class="img3 col-lg-6 col-md-11 col-11 d-block" id="im2">
+          <img src="img/Knowledge-Graphs-for-Fraud-Detection---Use-Case.webp" class="d-block img-fluid">
+        </div>
+        <div class="div2 col-lg-5" style="float: left;">
+          <h2 class="mb-3">Fraud Detection</h2>
+          AI-powered fraud detection systems analyze patterns and anomalies in large datasets to identify and
+          prevent fraudulent activities in areas like banking, insurance, and cybersecurity.
+
+          These are just a few examples of AI features, and the field continues to advance rapidly with new
+          innovations and capabilities being developed.
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <footer class="bgdark text-center text-light text-lg-start">
+   
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+           <div class="col-lg-4 col-md-6 mb-4 mb-md-0  pe-5">
+          <h5 class="text-uppercase text-center  "> <a href="index.html"><img src="img/logo.png" width="130px" height="auto"></a></h5>
+          <p class="fs-6 "><span class="fs-3">A</span>rtificial intelligence is the future of computing, enabling
+            machines to learn, reason, and perform tasks that traditionally required human intelligence</p>
+
+        </div>
+        <!--Grid column-->
+
+       
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3  fooedit" >
+            <li class="my-lg-2">
+              <a href="index.html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="tool.html"><span class="lispan">Tool</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feature.html"><span class="lispan">Features</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contact.html"><span class="lispan">Contact</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="news1.html"><span class="lispan">News</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="details.html"><span class="lispan">Job Detail</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+</body>
+
+</html>

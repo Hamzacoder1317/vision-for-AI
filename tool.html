@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AI-Tool</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href='styles.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="icon" href="img/logotit.png" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Pattaya);
+
+  .fontst {
+    font-size: 78px;
+    color: #199cf3;
+    text-shadow: 0px 2px 4px #000000;
+  }
+
+  .font1 {
+
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+
+  .side {
+    text-shadow: 0px 2px 4px #ffffff;
+    font-size: 58px;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 575.98px) {
+    .pres {
+      font-size: 13px;
+    }
+
+    .top12 {
+      margin-top: -11rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    .pres {
+      font-size: 14px;
+    }
+
+  }
+
+
+  @media (min-width: 768px) {
+    .pres {
+      font-size: 15px;
+    }
+
+
+  }
+
+  @media (min-width: 992px) {
+    .pres {
+      font-size: 16px;
+    }
+  }
+
+
+  @media (min-width: 1200px) {
+    .pres {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .pres {
+      font-size: 20px;
+    }
+  }
+
+  body,
+  html {
+
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+
+  }
+
+  .contaner {
+background: url(https://assets.designs.ai/videos/design.ai-intro.mp4);
+    position: relative;
+    max-width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Ensures the text is on top of the rounded divs */
+  }
+
+  .animated-text {
+    font-size: 8vw;
+    font-weight: bolder;
+    white-space: nowrap;
+    background: linear-gradient(45deg, #ff6384, #fe91ff, #ffcd56, #4bc0c0);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow-text 7s linear infinite;
+}
+
+  @keyframes rainbow-text {
+    0% {
+      background-position: 0 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+.back{
+  background: linear-gradient(45deg, #ff6384, #36a2eb, #ffcd56, #4bc0c0);
+    background-size: 400%;
+    animation: rainbow 7s linear infinite;
+    border-radius: 20px;
+    box-shadow: 2px 3px 9px;
+}
+@keyframes rainbow {
+    0% {
+      background-position: 0 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  .back1 {
+    background: linear-gradient(57deg, #01469b, #0055a3, #0077cc, #0099ff, #0078a3);
+    background-size: 400%;
+    animation: rotate-background 8s linear infinite;
+}
+ 
+   
+
+
+@keyframes rotate-background {
+    0% {
+        background-position:  50%;
+    }
+
+    50% {
+        background-position:  100%;
+    }
+    
+    100% {
+        background-position:  50%;
+    }
+}
+
+  .rounded-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Set the z-index to place the divs behind the text */
+    overflow: hidden;
+  }
+
+  .rounded-border div {
+    position: absolute;
+    width: 25rem;
+    height: 27rem;
+    border: 180px solid transparent;
+    border-radius: 50%;
+    animation: border-animate 8s linear infinite;
+  }
+
+  .rounded-border div:nth-child(1) {
+    border-top-color: #ff6384;
+  }
+
+  .rounded-border div:nth-child(2) {
+    border-top-color: #36a2eb;
+    animation-delay: 2s;
+  }
+
+  .rounded-border div:nth-child(3) {
+    border-top-color: #ffcd56;
+    animation-delay: 4s;
+  }
+
+  .rounded-border div:nth-child(4) {
+    border-top-color: #5254ff;
+    animation-delay: 6s;
+  }
+
+  @keyframes border-animate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .bg7 {
+
+    background-image: url(img/bg7.png);
+    background-position: cover;
+    background-size: cover;
+
+  }
+
+  ul li {
+    padding-top: 1%;
+
+  }
+
+  .bg9 {
+    background-image: linear-gradient(45deg, #414141, #0c6ba5);
+    width: 100%;
+
+
+  }
+
+  .hr-container {
+    position: relative;
+    width: 85%;
+    margin: auto;
+
+  }
+
+  .hr-line {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #e74c3c, #9b59b6);
+    border-radius: 10px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.9);
+    animation: shine 3s infinite alternate;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+
+  .a111 {
+    transform: translateX(0px);
+    transition: all 1s;
+  }
+
+  .a111:hover {
+    transform: translateX(10px);
+
+  }
+ .perre{
+  border-radius: 100%;
+  box-shadow: 0px 5px 10px ;
+  overflow: hidden;
+ }
+ .chil{
+width: 100%;
+transition: all 1s;
+}
+ .chil:hover{
+  transform: scale(1.2);
+ }
+</style>
+
+<body>
+  <div class="progress-line" id="progressLine"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fld" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " id="anav" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" id="anav" href="tool.html">Tool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="feature.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="news1.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="anav" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contaner back1">
+    <!-- <div class="rounded-border">
+      <div> </div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+    <div class="text-wrapper">
+      <h1 class="animated-text lin">Let's know about <span class="lin12"></span> </h1>
+    </div>
+
+
+
+  </div>
+
+  <div class="conatiner bg7">
+
+    <div class="row mt-5 ">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt-5 p-5">
+        <h1 class=" fw-bolder   fontst  "> <span class="animated-text">Ai</span> tool </h1>
+        <p class="pres fw-bold"> AI (Artificial Intelligence) tools are software or applications that utilize artificial
+          intelligence techniques to perform various tasks and solve problems. These tools leverage machine learning
+          algorithms, natural language processing, computer vision, and other AI techniques to provide valuable
+          insights, automate processes, and make data-driven decisions. AI tools can be used in various domains and
+          industries, and they continue to evolve rapidly, offering more sophisticated capabilities over time.</p>
+        <div class="col">
+          <ul class="tick1 pres fw-bolder">
+            <h3 class="fw-bold font1 text-underline text-primary text-center">Some famous Ai tool </h3>
+            <li class="a111"><a href="#voice">voice tool</a></li>
+            <li class="a111"><a href="#Vedio">Video tool</a></li>
+            <li class="a111"><a href="#Photo">Photo tool</a> </li>
+            <li class="a111"><a href="#ui/ux">UI/UX tool</a></li>
+            <li class="a111"><a href="#wed">Website tool</a></li>
+            <li class="a111"><a href="#chat">Chatboot tool ..</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-12" style="display: flex;justify-content: center; align-items: end;">
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade top12" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/voice12.png" class="img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/vedio.png" class="img-fluid" alt="...">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bg9">
+    <div class="row">
+      <img src="img/bg-8.png" class="img-fluid" alt="">
+    </div>
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="voice"> <span class="animated-text">Voice</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Converts text into <br>Spoken Speech.</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>An AI voice tool converts text to lifelike speech using advanced
+            algorithms. It's used in apps, devices, and services for natural-sounding interactions.<span
+              class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">400k+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">200k+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+          <img src="img/scc.png" class="img-fluid" alt="">
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">AI voice tools use a combination of linguistic analysis, phonetic
+          conversion, voice modeling,
+          and advanced synthesis techniques to transform written text into natural-sounding speech. These tools find
+          applications in various fields, such as accessibility services, virtual assistants, e-learning platforms,
+          entertainment, and more.</p>
+      </div>
+      <div class="row">
+        <img src="img/scc1.png" class="img-fluid">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="hr-container">
+      <hr class="hr-line">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="ui/ux"> <span class="animated-text">UI/UX</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Design, Prototype, User Interface, Experience</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>The world's easiest-to-use design and ideation tool - powered by AI<span
+              class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">700k+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">350k+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+          <video class="img-fluid" style="border-radius: 10px;
+          box-shadow: 4px 5px 13px 0px;    width: -webkit-fill-available;" muted loop autoplay
+            src="https://uizard.io/videos/uizard-autodesigner-light.mp4"></video>
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">Automation For Improved Efficiency
+
+          AI-driven automation in design helps UI/UX designers streamline their design work, such as creating repetitive
+          tasks, using pattern recognition to put together design pieces, validating data input, getting suggestions for
+          design patterns, and more.</p>
+      </div>
+      <div class="row  back " >
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 p-5 text-light " style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+
+          <h1 class="text-uppercase fw-bolder">Design made easy</h1>
+<p class="fs-4 fw-bold text-dark">Anyone can have a great idea... now everyone can bring them to life.</p>
+
+        </div>
+        
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <img src="img/uiux.png" class="img-fluid" style="border-radius: 20px;" alt="">
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="hr-container">
+      <hr class="hr-line">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="wed"> <span class="animated-text">Website</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Instant websites, <br>no hassle.</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>Revolutionize your online presence with our AI website tool. Effortlessly create stunning websites that adapt and impress. Elevate your brand today<span
+              class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">5M+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">3M+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+         
+            <video class="img-fluid" style="border-radius: 10px;
+          box-shadow: 4px 5px 13px 0px;    width: -webkit-fill-available;" muted loop autoplay
+            src="https://10web.io/wp-content/themes/10web-theme/videos/ai_builder/ai_builder.mp4"></video>
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">An AI website tool employs algorithms to analyze user behavior and content, offering personalized suggestions, automating tasks like chatbots, and refining itself over time to enhance website performance and user experience.</p>
+      </div>
+      <div class="row">
+        <img src="img/web.png" class="img-fluid">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="hr-container">
+      <hr class="hr-line">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="chat"> <span class="animated-text">Chatbot</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Conversational AI <br>for interactive engagement.</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>A chatbot tool automates conversations, aiding businesses in customer support, engagement, and tasks. <span
+              class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">10M+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">5M+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+         
+            <video class="img-fluid" style="border-radius: 10px;
+          box-shadow: 4px 5px 13px 0px;    width: -webkit-fill-available;" muted loop autoplay
+            src="ved/chatbot.mp4"></video>
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">To effectively serve users, a chatbot should have a clear purpose, be user-friendly, provide accurate information, offer real-time responses, and continuously learn and improve interactions.It responds intelligently, enhancing user experiences efficiently and effectively.</p>
+      </div>
+      <div class="row">
+        <div class="perre">
+        <img src="https://geekflare.com/wp-content/uploads/2016/11/chatbot-1.png"  class="img-fluid chil">
+      </div>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="hr-container">
+      <hr class="hr-line">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="Vedio"> <span class="animated-text">Video</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Instant Video Creation <br> Solutions.</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>Transforming ideas into captivating visuals. Automate editing, enhance
+            quality, and create stunning videos effortlessly. Elevate your content<span class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">300k+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">150k+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+          <video class="img-fluid" style="border-radius: 10px;
+          box-shadow: 4px 5px 13px 0px;" muted loop autoplay src="ved/Invideo_AI_Teaser_E_eb2e97e70d.mp4"></video>
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">To make a video with AI, go to Synthesia.io and create an account.
+          Once you have access to the video editor, choose a video template and an AI avatar, paste in your video script
+          and choose a voice and language. Add any extras like background music, images, videos, animations, shapes, and
+          then simply generate the video.</p>
+      </div>
+      <div class="row">
+        <img src="img/Capture23.png" class="img-fluid">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="hr-container">
+      <hr class="hr-line">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row mt-5">
+        <h1 class=" fw-bolder text-center text-light " id="Photo"> <span class="animated-text">Photo</span> <span
+            class="fontst">tool</span> </h1>
+        <div class="col-lg-4  col-lg-4  col-sm-12 col-12 ">
+
+          <h1 class="fw-bolder pt-5 side">Transform Images into<br>Stunning visual Stories.</h1>
+          <p class="pres fw-bolder  text-info pb-3" style="border-bottom: 1px solid rgb(99, 99, 99);"> <span
+              class="fs-3 text-danger ">"</span>Enhance images with remarkable precision using our advanced AI-powered
+            photo tool. Transform ordinary photos into extraordinary visual masterpieces effortlessly<span
+              class=" fs-4 ">"</span></p>
+          <div class="row">
+            <div class="col">
+              <h2 class="fw-bolder">500k+</h2>
+              <p class=" text-muted">Login user</p>
+            </div>
+            <div class="col">
+              <h2 class="fw-bolder">250k+</h2>
+              <p class=" text-muted">Average user</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8  col-lg-8  col-sm-12 col-12">
+          <video class="img-fluid" style="border-radius: 10px;
+          box-shadow: 4px 5px 13px 0px;" muted loop autoplay src="ved/photo ai.mp4"></video>
+        </div>
+
+      </div>
+      <div class="row ">
+        <p class="pres text-light text-center pt-5">Artificial Intelligence tool for photos, is a software application
+          or system that utilizes various machine learning and computer vision techniques to analyze, enhance,
+          manipulate, or generate images and photographs. These tools leverage advanced algorithms to perform tasks that
+          would traditionally require human intervention, offering automated and efficient solutions for various aspects
+          of working with images.</p>
+      </div>
+      <div class="row">
+        <img src="img/Capture12.png" class="img-fluid">
+      </div>
+
+
+
+
+    </div>
+
+  
+
+
+
+
+
+
+
+  </div>
+  <footer class="bgdark text-center text-light text-lg-start">
+   
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+           <div class="col-lg-4 col-md-6 mb-4 mb-md-0  pe-5">
+          <h5 class="text-uppercase text-center  "> <a href="index.html"><img src="img/logo.png" width="130px" height="auto"></a></h5>
+          <p class="fs-6 "><span class="fs-3">A</span>rtificial intelligence is the future of computing, enabling
+            machines to learn, reason, and perform tasks that traditionally required human intelligence</p>
+
+        </div>
+        <!--Grid column-->
+
+       
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3  fooedit" >
+            <li class="my-lg-2">
+              <a href="index.html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="tool.html"><span class="lispan">Tool</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feature.html"><span class="lispan">Features</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contact.html"><span class="lispan">Contact</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="news1.html"><span class="lispan">News</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="details.html"><span class="lispan">Job Detail</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typingEffect = new Typed(".lin12",{
+    strings : ["Ai tool" , "Ai tool" , "Ai tool"],
+    loop : true,
+    typeSpeed : 100,
+    backSpeed : 80,
+    backDelay : 1500
+
+  });
+  
+  
+
+</script>
+
+  
+</script>
+</html>

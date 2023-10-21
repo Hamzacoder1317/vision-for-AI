@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-JOB DETAILS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/logotit.png" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<style>
+  /* footer */
+  .bgdark {
+    background-image: linear-gradient(291deg, #474747, #000000);
+    ;
+
+  }
+
+  .bg-dark1 {
+    background-image: linear-gradient(291deg, #5667c9, #2d0b00);
+
+
+  }
+
+  .container.h-100.p-4 {
+    margin-bottom: -35px;
+  }
+
+  .my-lg-2 {
+    transition: 0.5s;
+  }
+
+  .lispan {
+    transition: 0.2s;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .lispan {
+    color: rgb(255, 255, 255);
+  }
+
+  .lispan:hover {
+    color: rgb(8, 83, 148);
+    translate: 10px;
+  }
+
+  .my-lg-2:hover {
+    translate: 10px;
+  }
+
+
+  .news {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .news .bi {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .news input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    outline: none;
+  }
+
+  .news button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .news button .bi {
+    color: #ccc;
+    font-size: 19px;
+  }
+
+  .social-icon {
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+    margin-left: 30px;
+
+    cursor: pointer;
+    line-height: 35px;
+  }
+
+  .underline12 {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 3px;
+    position: sticky;
+    overflow: hidden;
+  }
+
+  .underline12 span {
+    width: 15px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+  }
+
+  @keyframes moving {
+    0% {
+      left: -20px;
+
+    }
+
+    100% {
+      left: 100%;
+
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* footerend */
+  .div1 {
+    background-color: black;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: 1s;
+
+  }
+
+  .container {
+    animation: leftFadeIn 1s ease-in-out;
+  }
+
+  @keyframes leftFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .div1:hover {
+    background-color: rgba(2, 91, 255, 0.648);
+  }
+
+  .img2 {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  #heart {
+    transition: 1s;
+  }
+
+  .div1:hover i {
+    color: rgba(255, 0, 0, 0.795);
+  }
+
+  .icon {
+    background-color: rgba(255, 0, 0, 0.601);
+    border-radius: 50%;
+    transition: 1s;
+  }
+
+  .div1:hover .icon {
+    background-color: blue;
+  }
+
+  .img2 {
+    transition: 1s;
+    overflow: hidden;
+  }
+
+  .div1:hover .img2 {
+    transform: scale(1.1);
+  }
+
+  body {
+    background-image: url("img/pexels-tara-winstead-8386440-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  .back {
+    background-image: url("img/ZUaIoYC1KlUfLDKGrtbV1sHwI4LbNJCV50ocxbLZ.jpg");
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: background-image 1s ease-out;
+  }
+
+  .back:hover {
+    background-image: url("img/photo-1603366615917-1fa6dad5c4fa.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  #p1
+  {
+    color: grey;
+  }
+  .div1:hover #p1
+  {
+    color: white;
+  }
+</style>
+
+<body class="text-white">
+  <div class="progress-line" id="progressLine"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fld" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" id="anav" href="tool.html">Tool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="feature.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="news1.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+
+    <div class="row " data-aos="zoom-in-up">
+
+      <div class="div1 col-lg-7 col-md-6 mb-lg-0 mb-md-0 mb-3">
+
+        <i class="bi bi-heart" style="margin-left: 95%; font-size: 24px;"></i>
+        <h2 class="mb-4">Software Engineer, Managed Services</h2>
+        <a class="fw-bold text-white p-2" style="background-color: rgba(0, 255, 255, 0.275); 
+         text-decoration: none; border-radius: 8px;">77%Flex</a>
+        <p class="mt-5"><a class=""><i class="bi bi-house"></i></a> Remote: Full Remote</p>
+        <p><i class="bi bi-reception-4 text-success"></i> Experience: Junior (1-2 years)</p>
+        <p class=""><i class="bi bi-geo-alt-fill text-danger"></i> Work From: Pakistan</p>
+      </div>
+      <div class="div1 col ms-lg-5 ms-md-5">
+
+        <img src="img/logo.png" class="img-fluid d-block col-lg-7 col-md-6 img2" alt="">
+        <h4 class="text-center mt-3">ARTIFICIAL INTELLIGENCE (AI)</h4>
+        <p class="text-center mt-3"><a class="p-1"><i class="bi bi-people-fill"></i> </a>201 - 500 Employees</p>
+      </div>
+
+
+    </div>
+
+    <h2 class="mt-5 text-center" style="text-transform: uppercase; text-shadow: darkblue 2px 2px 2px;">Job Description
+    </h2>
+
+
+    <div class="mb-5 back">
+
+      <p><i class="bi bi-briefcase-fill text-success" style="font-size: 26px;"></i> <a
+          style="font-size: 30px; font-weight: bold; text-decoration: none;" class="ms-2 text-white">Your
+          Mission</a></p>
+
+      <p><strong>Software Engineer, Managed Service</strong></p>
+
+      <p>
+        At Artificial Intelligence, we're not just building a database company, we are defining the future of data
+        management. Going beyond multi-cloud, we offer our customers flexible networking, storage and compute
+        options to meet their requirements. They click a few options, and our service flies into action, using
+        the latest capabilities of the big cloud providers and the industry-standard Kubernetes ecosystem to get
+        the job done. This managed service helps make Artificial Intelligence an excellent choice for many of our
+        customers.
+      </p>
+
+      <p>
+        We are looking for exceptional talent to help us push the boundaries of what’s possible with a managed
+        database product. The next set of capabilities in the pipeline require overcoming difficult technical
+        challenges in the areas of networking, control plane, and scaling services - inventing some of the
+        future of what customers will come to expect from a managed database product.
+      </p>
+
+      <p>
+        As a part of the managed service team, you will design and implement new capabilities for our cloud
+        offering involving deep extensions to our networking, control plane, and overall managed service. Your
+        role will include working closely with our product teams to collaborate on meeting the needs of our most
+        demanding long-time and new customers. In this role, you will be at the intersection of leading
+        technology trends - A highly performant distributed database, managed by Kubernetes, running in the
+        cloud. You will probably find yourself using Go and Kubernetes, with a generous sprinkling of whatever
+        the right tool is for the job. We look forward to hearing from you!
+      </p>
+
+      <h3>Role and Responsibilities</h3>
+
+      <ul>
+        <li>Work closely with product managers, designers, customers, and other engineers to ensure we deliver a
+          high-quality experience</li>
+        <li>Develop a world-class managed service responsible for providing an innovative operational database
+          solution in the cloud</li>
+        <li>Proactively contribute to the team's engineering process to assist with our ability to scale and
+          deliver projects on time</li>
+        <li>Mentor junior engineers and contribute to a welcoming team environment</li>
+      </ul>
+
+      <h3>Required Skills and Experience</h3>
+
+      <ul>
+        <li>Experience with working on distributed systems, ideally in programming languages such as Golang,
+          Python or Rust</li>
+        <li>Experience working with Kubernetes and/or containerized services</li>
+        <li>2+ years of experience working on a SaaS product</li>
+        <li>Intellectual curiosity about investigating issues that impact business metrics</li>
+        <li>Passion for building high-quality products that are robust and easy to maintain in a fast-paced,
+          team-oriented environment</li>
+      </ul>
+
+      <p>
+        As employees are located in many different countries around the world, some benefits may differ from
+        country to country. In all cases, we do our best to provide equitable perks and benefits across our
+        locations.
+      </p>
+      <hr class="line">
+
+      <p>
+        Artificial Intelligence delivers the cloud-native database with the speed and scale to power the world’s
+        data-intensive applications. With a distributed SQL database that introduces simplicity to your data
+        architecture by unifying transactions and analytics, Artificial Intelligence empowers digital leaders to deliver
+        exceptional, real-time data experiences to their customers. Artificial Intelligence is venture-backed and
+        headquartered in San Francisco with offices in Sunnyvale, Raleigh, Seattle, Boston, London, Lisbon,
+        Bangalore, Dublin and Kyiv.
+      </p>
+
+      <p>
+        Consistent with our commitment to diversity &amp; inclusion, we value individuals with the ability to
+        work on diverse teams and with a diverse range of people.
+      </p>
+
+      <p>
+        Please note that Artificial Intelligence’s COVID-19 vaccination policy requires that team members in the United
+        States be up to date with the current CDC guidelines for their vaccinations with one of the United
+        States FDA-approved vaccine options to meet in person for Artificial Intelligence business or to work from one
+        of
+        our U.S. office locations. [It is expected that this will be a requirement for this role]. If an
+        exemption and/or accommodation to our vaccination policy is requested, a member of the Human Resources
+        department will be available to begin the interactive accommodation process.
+      </p>
+
+      <p>
+        To all recruitment agencies: Artificial Intelligence does not accept agency resumes. Please do not forward
+        resumes
+        to Artificial Intelligence employees. Artificial Intelligence is not responsible for any fees related to
+        unsolicited resumes and
+        will not pay fees to any third-party agency or company that does not have a signed agreement with the
+        Company.
+      </p>
+
+      <p>
+        Artificial Intelligence values individuals for their unique skills and experiences, and we’re proud to offer
+        roles
+        in a variety of locations across the United States. Salary is based on permissible, non-discriminatory
+        factors such as skills, experience, and geographic location, and is just one part of our total
+        compensation and benefits package. Certain roles are also eligible for additional rewards, including
+        merit increases and annual bonuses.
+      </p>
+
+      <p>
+        Our benefits package for this role includes: stock options, flexible paid time off, monthly three-day
+        weekends, 14 weeks of fully-paid gender-neutral parental leave, fertility and adoption assistance,
+        mental health counseling, 401(k) retirement plan, and rich health insurance offerings—including medical,
+        dental, vision and life and disability insurance.
+      </p>
+
+      <p>
+        <strong>
+          Our benefits package for this role includes: stock options, flexible paid time off, monthly
+          three-day weekends, 14 weeks of fully-paid gender-neutral parental leave, fertility and adoption
+          assistance, mental health counseling, 401(k) retirement plan, and rich health insurance
+          offerings—including medical, dental, vision and life and disability insurance.
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin: auto; display: flex; justify-content: center;" data-aos="zoom-in-up">
+
+    <h3 class="text-center" style="text-transform: uppercase; text-shadow: darkblue 2px 2px 2px;">Required Profile</h3>
+
+    <div class="div1 col-lg-4 m-2">
+
+
+      <p class="mt-3"><a class="p-2 icon">
+          <i style="font-size: 18px;" class="bi bi-geo-alt-fill"></i></a>
+        <strong style="font-size: 20px;" class="ms-1">Remote Location Allowed</strong>
+      </p>
+
+      <p class="mt-5">
+        To apply to this offer, be sure you can work from :<strong class="px-2 py-1  text-center">Pakistan</strong>
+      </p>
+    </div>
+
+
+    <div class="div1 col-lg-4 m-2">
+
+
+      <p class="mt-3"><a class="p-2 icon">
+          <i style="font-size: 18px;" class="bi bi-mortarboard-fill"></i></a>
+        <strong style="font-size: 20px;" class="ms-1">Experience</strong>
+      </p>
+
+      <p class="mt-5">
+        Level of Experience :<strong class="px-2 py-1  text-center">Junior (1-2 years)</strong>
+      </p>
+
+      <p class="mt-4">
+        Spoken Language(s) :<strong class="px-2 py-1  text-center">English</strong>
+      </p>
+
+      <p id="p1">
+          Check out the discription to know which languages are mandatory.
+      </p>
+    </div>
+
+    <div class="div1 col-lg-3 m-2">
+
+
+      <p class="mt-3"><a class="p-2 icon">
+          <i style="font-size: 18px;" class="bi bi-tools"></i></a>
+        <strong style="font-size: 20px;" class="ms-1">Skill</strong>
+      </p>
+
+      <p class="mt-5">
+        <strong class="px-2 py-1 text-center">Cloud</strong>
+      </p>
+    </div>
+
+
+  </div>
+
+
+
+  
+  <footer class="bgdark text-center text-light text-lg-start">
+   
+    <div class="container h-100 p-4">
+      <!--Grid row-->
+      <div class="row mt-3 my-">
+        <!--Grid column-->
+           <div class="col-lg-4 col-md-6 mb-4 mb-md-0  pe-5">
+          <h5 class="text-uppercase text-center  "> <a href="index.html"><img src="img/logo.png" width="130px" height="auto"></a></h5>
+          <p class="fs-6 "><span class="fs-3">A</span>rtificial intelligence is the future of computing, enabling
+            machines to learn, reason, and perform tasks that traditionally required human intelligence</p>
+
+        </div>
+        <!--Grid column-->
+
+       
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 text-center mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <i class="bi bi-link-45deg fs-5"></i>
+            <h5 class="text-uppercase ">Links <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+
+
+          <ul class="list-unstyled lh-lg my-lg-3  fooedit" >
+            <li class="my-lg-2">
+              <a href="index.html"><span class="lispan">Home</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="tool.html"><span class="lispan">Tool</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="feature.html"><span class="lispan">Features</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="contact.html"><span class="lispan">Contact</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="news1.html"><span class="lispan">News</span></a>
+            </li>
+            <li class="my-lg-2">
+              <a href="details.html"><span class="lispan">Job Detail</span></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="d-lg-flex justify-content-center">
+            <h5 class="text-uppercase">Newsletter <div class="underline12"><span></span></div>
+            </h5>
+          </div>
+          <form class="news">
+            <i class="bi bi-envelope"></i>
+            <input type="email" placeholder="Enter Your Email " required>
+            <button type="submit"> <i class="bi bi-arrow-right-short"></i></button>
+
+
+          </form>
+          <div class="social-icon">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-telegram"></i>
+
+
+          </div>
+
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright-All Rights Reserved |
+      <a class="text-dark" href="#">Powder by XStak</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
